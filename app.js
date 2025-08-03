@@ -13,7 +13,18 @@ dotenv.config();
 connectDB();           
 
 const app = express();
-app.use(cors());
+
+
+const allowedOrigins = [
+  'https://famous-profiterole-ea3e22.netlify.app', 
+  'http://localhost:5173' 
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true, 
+}));
+
 app.use(express.json());
 
 
@@ -27,7 +38,6 @@ app.use('/api/users', userRoutes);
 app.get('/', (req, res) => {
   res.send('API is running...');
 });
-
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
