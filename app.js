@@ -16,7 +16,7 @@ const app = express();
 
 
 const allowedOrigins = [
-  'https://famous-profiterole-ea3e22.netlify.app', 
+  'https://dashing-lolly-71872b.netlify.app', 
   'http://localhost:5173' 
 ];
 
