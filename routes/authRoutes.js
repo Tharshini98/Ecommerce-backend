@@ -2,6 +2,9 @@ const express = require('express');
 const {register, login, forgotPassword, resetPassword, changPassword} = require('../controllers/authController');
 const {protect} = require('../middlewares/authMiddleware');
 const router = express.Router();
+const bcrypt = require('bcryptjs');
+const User = require('../models/User');
+
 
 router.post('/register', register);
 router.post('/login', login);
