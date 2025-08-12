@@ -17,11 +17,12 @@ const app = express();
 
 
 const allowedOrigins = [ 
-  'http://localhost:5173' 
+  'https://dazzling-taiyaki-b380a0.netlify.app' 
 ];
 
 app.use(cors({
   origin: allowedOrigins,
+   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true, 
 }));
 
