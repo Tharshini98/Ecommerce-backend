@@ -17,7 +17,7 @@ const app = express();
 
 
 const allowedOrigins = [ 
-  'https://dazzling-taiyaki-b380a0.netlify.app' 
+  'https://sunny-begonia-e734a2.netlify.app' 
 ];
 
 app.use(cors({
