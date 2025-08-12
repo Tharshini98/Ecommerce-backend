@@ -9,7 +9,7 @@ const User = require('../models/User');
 router.post('/register', register);
 router.post('/login', login);
 router.post('/forgot-password', forgotPassword);
-router.post('/reset-password/:token', resetPassword);
+router.post('/auth/reset-password/:token', resetPassword);
 router.post("/change-password", protect, async (req, res) => {
   try {
     const { oldPassword, newPassword } = req.body;
