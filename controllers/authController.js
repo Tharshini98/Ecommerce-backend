@@ -60,7 +60,7 @@ exports.forgotPassword = async (req, res) => {
 
     await user.save();
 
-    const resetUrl = `http://localhost:5173/reset-password/${resetToken}`; 
+    const resetUrl = `https://dazzling-taiyaki-b380a0.netlify.app/reset-password/${resetToken}`; 
 
     await sendEmail(user.email, 'Password Reset', `Reset your password here: ${resetUrl}`);
 
